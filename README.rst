@@ -11,16 +11,14 @@ Features
 
 - Allows validating and sanitizing dicts using any callables
 - Provides several useful helpers
-- Easy to use -- no class-bases boilerplate!
+- Easy to use -- no class-based boilerplate!
 
 API
 ---
 
-``validate`` function takes any mapping as data and another mapping as scheme
- and check data against scheme. It returns list of errors.
+``validate`` function takes any mapping as data and another mapping as scheme and check data against scheme. It returns list of errors.
 
-``sanitize`` function takes any mapping as data and another mapping as scheme
-and converts data according to schema definition.
+``sanitize`` function takes any mapping as data and another mapping as scheme and converts data according to schema definition.
 
 For more info -- see tests.
 
