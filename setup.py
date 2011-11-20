@@ -11,7 +11,7 @@ import kuvalda
 setup(
     name='kuvalda',
     version=kuvalda.__version__,
-    description='''Dumb Simple Validation Library.''',
+    description='''Damn Simple Validation Kit.''',
     long_description=open('README.rst').read(),
     author='Roma Sokolov',
     author_email='sokolov.r.v@gmail.com',

@@ -9,36 +9,27 @@ Validate dict-like object against schema, using just callables.
 Features
 --------
 
-- Knows str, int, list, boolean and None types
-- Supports sections and subsections
-- Easy to use -- one function!
+- Allows validating and sanitizing dicts using any callables
+- Provides several useful helpers
+- Easy to use -- no class-bases boilerplate!
 
 API
 ---
 
-``parse`` function takes any iterable (file object, for example), which produces strings and returns filled ``dict`` or raises ``ParseError``
+``validate`` function takes any mapping as data and another mapping as scheme
+ and check data against scheme. It returns list of errors.
 
-FAQ
----
+``sanitize`` function takes any mapping as data and another mapping as scheme
+and converts data according to schema definition.
 
-Q1: Does 'dosca' have validation capabilities?
-
-A1: No, it's not. If you want validate your config, use library designed for this task.
-`Contract <https://github.com/barbuza/contract>`_, `Procrustes <https://github.com/Deepwalker/procrustes>`_ or, perhaps, Damn Simple Validation Library?
-
-
-
-Q2: Does it support interpolation or some complex types?
-
-A2: No, it's not. When I say 'simple', I mean really simple. Dosca only support basic things, essential for parsing config files.
-If you want advanced features, use `ConfigObj <http://www.voidspace.org.uk/python/configobj.html>`_ or `ConfigParser <http://docs.python.org/library/configparser.html>`_. Or xml and dtd?
+For more info -- see tests.
 
 Install
 -------
 
 ~/yourvirtualenv/python setup.py install
 
-pip install dosca
+pip install kuvalda
 
 License
 -------
