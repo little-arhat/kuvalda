@@ -3,6 +3,10 @@
 import sys
 import copy
 
+try:
+    from __builtin__ import reduce
+except ImportError:
+    from functools import reduce
 from functools import wraps, partial
 
 
@@ -65,12 +69,18 @@ def map_(func):
 
 
 def list_of(func):
-    return compose(list, map_(func))
+    return compose(list, map_(func), list)
 
+
+def iteritems(d, **kw):
+    try:
+        return d.iteritems(**kw)
+    except AttributeError:
+        return d.items(**kw)
 
 def yield_pairs(it):
     try:
-        return it.iteritems()
+        return iteritems(it)
     except AttributeError:
         return iter(it)
 
