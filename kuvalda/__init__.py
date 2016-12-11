@@ -12,6 +12,6 @@ __all__ = ('validate', 'sanitize', 'sanitize_in_place',
            'ValidationError')
 
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 __author__ = 'Roma Sokolov'
 __license__ = 'MIT'
